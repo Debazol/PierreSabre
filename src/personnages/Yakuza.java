@@ -4,8 +4,8 @@ public class Yakuza extends Humain {
 	private int reput=4;
 	private String clan;
 
-	public Yakuza(String clan, int argent, String nom, String boisson ){
-		super(argent,nom,boisson);
+	public Yakuza( String nom, String boisson, int argent,String clan ){
+		super(nom,boisson,argent);
 		this.clan=clan;
 		
 	}
@@ -16,11 +16,11 @@ public class Yakuza extends Humain {
 	public void extorquer(Commercant Victime) {
 		String message1="Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?";
 		parler(message1);
-		String message2= Victime.nom+" , si tu tiens à la vie donne moi ta bourse !";
+		String message2= Victime.getNom()+" , si tu tiens à la vie donne moi ta bourse !";
 		parler(message2);
-		argent+=Victime.getargent();
+		argent+=Victime.getArgent();
 		
-		String message3="J'ai piqué les "+Victime.getargent()+" sous de "+Victime.nom+" , ce qui me fait "+argent+" sous "
+		String message3="J'ai piqué les "+Victime.getArgent()+" sous de "+Victime.getArgent()+" , ce qui me fait "+argent+" sous "
 				+ "dans ma poche. HI HI!";
 		parler(message3);
 		//Victime.sefaireextorquer();

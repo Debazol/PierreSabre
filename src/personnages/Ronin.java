@@ -4,9 +4,9 @@ public class Ronin extends Humain {
 	private int honneur=1;
 	
 
-	public Ronin(int argent , String nom, String boisson ) {
+	public Ronin(String nom, String boisson,int argent  ) {
 		// TODO Auto-generated constructor stub
-		super(argent,nom,boisson);
+		super(nom,boisson,argent);
 	}
 	
 	public int getargent() {
